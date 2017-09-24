@@ -1,0 +1,45 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "command": "run",
+    "args": [],
+    "tasks": [
+        {
+            "taskName": "test",
+            "command": "node_modules/.bin/jasmine",
+            "type": "shell",
+            "isBackground": true,
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "dedicated"
+            },
+            "problemMatcher": {
+                "owner": "javascript",
+                "fileLocation": ["absolute"],
+                "severity": "error",
+                "pattern": [
+                    {
+                        "regexp": "Message.*"
+                    },
+                    {
+                        "regexp": "[^ ](.*)",
+                        "message": 1
+                    },
+                    {
+                        "regexp": "Stack.*"
+                    },
+                    {
+                        "regexp": "at +.*\\((.*\\\\*.ts):(\\d+):(\\d+)\\)",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3
+                    }
+                ]
+            }
+        }            
+            
+    ]
+}

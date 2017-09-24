@@ -1,0 +1,20 @@
+{
+  "name": "mytest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^2.6.0",
+    "@types/node": "^8.0.30",
+    "jasmine": "^2.8.0",
+    "jasmine-ts-console-reporter": "^1.0.2",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.2"
+  }
+}
