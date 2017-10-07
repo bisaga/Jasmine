@@ -1,27 +1,13 @@
 {
-    "version": "0.1.0",
-    "command": "run-server",
-    "isShellCommand": false,
-    "args": [],
-    "showOutput": "always",
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
     "tasks": [
         {
-            "taskName": "run server",
-            "showOutput": "always",
-            "command": "npm",
-            "args": [
-                "run", 
-                "server"
-            ]
-        },
-        {
-            "taskName": "run test",
-            "showOutput": "always",
-            "command": "npm",
-            "args": [
-                "run", 
-                "test"
-            ],
+            "taskName": "test",
+            "command": "node_modules/.bin/jasmine",
+            "type": "shell",
+            "isBackground": false,
             "problemMatcher": {
                 "owner": "javascript",
                 "fileLocation": ["absolute"],
@@ -45,6 +31,7 @@
                     }
                 ]
             }
-        }
+        }            
+            
     ]
 }
